@@ -1,0 +1,21 @@
+<h1>ooioi</h1>
+<%= form_for @project do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>   
+
+   <%= f.label :description %>
+  <%= f.text_field :description %>   
+
+   <%= f.label :skills_descritions %>
+  <%= f.text_field :skills_descritions %>   
+
+   <%= f.label :maximum_Value_hour %>
+  <%= f.date_field :maximum_Value_hour %>
+
+ <%= f.label :demand %>
+<%= f.select :demand, options_for_select(@project.demand.map {|key, value| [key.titleize, @project.demand.key(value)]},@project.demand) %> 
+
+  
+
+  
+<% end %>
