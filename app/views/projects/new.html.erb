@@ -1,19 +1,22 @@
 <h1>ooioi</h1>
 <%= form_for @project do |f| %>
-  <%= f.label :title %>
+  <%= f.label :title, 'Título' %>
   <%= f.text_field :title %>   
 
-   <%= f.label :description %>
+   <%= f.label :description, 'Descrição' %>
   <%= f.text_field :description %>   
 
-   <%= f.label :skills_descritions %>
-  <%= f.text_field :skills_descritions %>   
+   <%= f.label :skills_descritions, 'Descreva as Habilidades Esperadas' %>
+  <%= f.text_area :skills_descritions %>   
 
-   <%= f.label :maximum_Value_hour %>
-  <%= f.date_field :maximum_Value_hour %>
+   <%= f.label :maximum_Value_hour, 'valor máximo (por hora de trabalho)' %>
+  <%= f.number_field :maximum_Value_hour %>
+
+  <%= f.label :deadline, 'Data limite' %>
+  <%= f.date_field :deadline     %>
 
  <%= f.label :demand %>
-<%= f.select :demand, Project::DEMAND_STATUS %>
+<%= f.select :demand, Project::DEMAND_STATUS, { include_blank: '--------' } %>
 
  <%= f.submit 'Enviar' %>
 
