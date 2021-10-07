@@ -26,11 +26,7 @@
 
  <%= f.label :demand %>
  <%= f.select :demand, options_for_select(Project.demands.map { |key, value| [key.humanize, key] }), {prompt: "Select Type of Property..."}, class: "form-control" %>
- <%# <%= f.select :demand, options_for_select(Project.demands), {prompt: "Select Type of Property..."}, class: "form-control" %> %>
- <%# <%= f.select :demand, options_for_select(Project::DEMAND_STATUS.map { |key, value| [key.humanize, key] }), {prompt: "Select Type of Property..."}, class: "form-control" %> %>
-
-<%# <%= f.select :demand, Project::DEMAND_STATUS, { include_blank: '--------' } %> %>
-
+ 
  <%= f.submit 'Enviar' %>
 
   
