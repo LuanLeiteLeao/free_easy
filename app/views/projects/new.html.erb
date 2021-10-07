@@ -1,4 +1,13 @@
 <h1>ooioi</h1>
+
+<% if @project.errors.any? %>
+    <ul>
+        <% @project.errors.full_messages.each do |error| %>
+            <li> <%= error %> </li>
+        <% end %>    
+    </ul>
+<% end %>
+
 <%= form_for @project do |f| %>
   <%= f.label :title, 'Título' %>
   <%= f.text_field :title %>   
@@ -16,7 +25,11 @@
   <%= f.date_field :deadline     %>
 
  <%= f.label :demand %>
-<%= f.select :demand, Project::DEMAND_STATUS, { include_blank: '--------' } %>
+ <%= f.select :demand, options_for_select(Project.demands.map { |key, value| [key.humanize, key] }), {prompt: "Select Type of Property..."}, class: "form-control" %>
+ <%# <%= f.select :demand, options_for_select(Project.demands), {prompt: "Select Type of Property..."}, class: "form-control" %> %>
+ <%# <%= f.select :demand, options_for_select(Project::DEMAND_STATUS.map { |key, value| [key.humanize, key] }), {prompt: "Select Type of Property..."}, class: "form-control" %> %>
+
+<%# <%= f.select :demand, Project::DEMAND_STATUS, { include_blank: '--------' } %> %>
 
  <%= f.submit 'Enviar' %>
 

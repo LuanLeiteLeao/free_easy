@@ -12,13 +12,23 @@ describe 'User Register Project' do
     fill_in 'Descreva as Habilidades Esperadas', with:'Alguém que entende de computadores certamente saberá hackear, de preferência fazendo um curso na área de TI'
     fill_in 'valor máximo (por hora de trabalho)', with:'100.00'
     fill_in 'Data limite', with:'28/10/2021'
-    select 'face_to_face', from: 'Demand'
-    select 'remote', from: 'Demand'
+    select 'Face to face', from: 'Demand'
+    select 'Remote', from: 'Demand'
     click_on 'Enviar'
     # Assert
-    expect(Project.all.count).to equal(1)
+    expect(Project.count).to equal(1)
 
   end
+
+  # it 'and must fill all fields' do
+  #   #Act
+  #   visit  new_project_path
+  #   click_on 'Enviar'  
+
+  #    #Assert
+  #    expect(page).to have_content('não pode ficar em branco')
+
+  # end
 end
 
 
