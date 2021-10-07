@@ -13,7 +13,9 @@
   <%= f.date_field :maximum_Value_hour %>
 
  <%= f.label :demand %>
-<%= f.select :demand, options_for_select(@project.demand.map {|key, value| [key.titleize, @project.demand.key(value)]},@project.demand) %> 
+<%= f.select :demand, Project::DEMAND_STATUS %>
+
+ <%= f.submit 'Enviar' %>
 
   
 

@@ -1,3 +1,6 @@
+
 class Project < ApplicationRecord
-  enum demand: [ :face_to_face, :remote ]
+  DEMAND_STATUS = { 'Face to Face': 0, 'Remote': 1 }
+  enum demand: DEMAND_STATUS 
+
 end

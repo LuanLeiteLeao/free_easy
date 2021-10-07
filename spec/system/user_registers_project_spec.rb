@@ -10,7 +10,7 @@ describe 'User Register Project' do
         precisamos de um sistema que contemple todas as nossas necessidades em um só sistema, que seja voltado para a nossas regras de negócio que aviação e ações missionárias',
         skills_descritions:'Pyton, React JS, React Native, AWS, Docker',
         maximum_Value_hour:'100.0',
-        demand:'face_to_face',
+        demand: 0,
         deadline: Time.parse('Oct 20 2021')
 
     })  
