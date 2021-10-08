@@ -1,8 +1,10 @@
 class ProjectsController < ApplicationController
   
-  # def show
-  #   @project = Project.all
-  # end
+  def index
+    @project = Project.all
+
+    render layout: "user"
+  end
 
   def new
     @project = Project.new
