@@ -1,4 +1,9 @@
 class ProjectsController < ApplicationController
+  
+  # def show
+  #   @project = Project.all
+  # end
+
   def new
     @project = Project.new
   end

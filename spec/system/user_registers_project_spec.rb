@@ -1,6 +1,7 @@
 require 'rails_helper'
 require "time"
 
+# TODO: Trocar depois User pos outro nome
 describe 'User Register Project' do
   it 'Successfuly' do
     #Arrange
@@ -27,6 +28,7 @@ describe 'User Register Project' do
 
      #Assert
      expect(page).to have_content('não pode ficar em branco', count: 6)
+     expect(Project.count).to eq(0)
 
   end
 end
