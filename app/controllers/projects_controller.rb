@@ -1,5 +1,10 @@
 class ProjectsController < ApplicationController
-  
+  def show
+    id = params[:id]
+    @project = Project.find(id)
+    render json: {'oi':'oi'}
+  end
+
   def index
     @project = Project.all
 

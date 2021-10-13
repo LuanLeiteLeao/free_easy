@@ -24,4 +24,9 @@ describe 'Professional visit home page' do
     expect(page).to have_content('face_to_face')
 
   end
+
+  it 'and dont even see a project' do
+    visit root_path
+    expect(page).to have_content('Nem um projeto cadastrado ainda')
+  end
 end
