@@ -1,6 +1,6 @@
-<% if !@project.blank? %>
-  <% for t in @project %>    
-    <div id="container" class="box effect2" onclick="(window.location='url')">
+<% if !@projects.blank? %>
+  <% for t in @projects %>    
+    <div id="container" class="box effect2" onclick="(window.location='<%= project_path(t) %>')">
         <h3><span>  <%= t.title %></span> <i>6 dias atrás</i></h3>
         <p> <%= t.description %> </p>
 
@@ -19,4 +19,5 @@
 <% else %>
  <h1>Nem um projeto cadastrado ainda</h1>
 <% end %>
+
 

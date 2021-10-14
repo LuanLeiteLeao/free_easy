@@ -2,11 +2,11 @@ class ProjectsController < ApplicationController
   def show
     id = params[:id]
     @project = Project.find(id)
-    render json: {'oi':'oi'}
+    render layout: "user"
   end
 
   def index
-    @project = Project.all
+    @projects = Project.all
 
     render layout: "user"
   end

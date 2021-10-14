@@ -1,0 +1,20 @@
+<% if !@project.blank? %> 
+    <div id="container" >
+        <h3><span>  <%= @project.title %></span> <i>6 dias atrás</i></h3>
+        <p> <%= @project.description %> </p>
+
+        <ul>
+            <li><strong>Habilidades Desejadas:</strong> <%= @project.skills_descritions %></li>
+            <li><strong>Valor:</strong><%= number_to_currency(@project.maximum_Value_hour, unit: 'R$', separator:',' , format:"%u %n") %>/Hrs</li>
+            <li><strong>Demanda:</strong> <%= @project.demand %></li>
+            <li><strong>Prazo Final:</strong> <%= @project.deadline %></li>
+        </ul>
+        
+         <%= link_to 'Voltar' ,root_path %> 
+
+        <div class="borda"></div>
+    </div>
+  
+<% else %>
+ <h1>Projeto Não existe</h1>
+<% end %>
