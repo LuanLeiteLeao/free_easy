@@ -7,7 +7,7 @@ describe 'Professional visit home page' do
         title:'ERP Para Escola',
         description:'precisamos de um sistema que contemple todas as nossas necessidades em um só sistema',
         skills_descritions:'Pyton, React JS, React Native, AWS, Docker',
-        maximum_Value_hour:'100.0',
+        maximum_value_hour:'100.0',
         demand: :face_to_face,
         deadline: Time.parse('Oct 20 2021')
     

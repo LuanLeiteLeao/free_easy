@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_06_174754) do
+ActiveRecord::Schema.define(version: 2021_10_14_175413) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.string "skills_descritions"
-    t.decimal "maximum_Value_hour"
+    t.decimal "maximum_value_hour"
     t.integer "demand"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

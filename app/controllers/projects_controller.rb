@@ -13,13 +13,14 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    render layout: "user"
   end
 
   def create
-    @project = Project.create(params.require(:project).permit(:title,:description,:skills_descritions,:maximum_Value_hour,:demand,:deadline))
+    @project = Project.create(params.require(:project).permit(:title,:description,:skills_descritions,:maximum_value_hour,:demand,:deadline))
     
       if @project.save 
-        redirect_to new_project_path
+        redirect_to @project
       else
         render :new
       end  

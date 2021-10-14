@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      project: 'Projeto'
+    attributes:
+      project:
+        title: 'Título'
+        description: 'Descrição'
+        skills_descritions: 'Descreva suas Habilidades'
+        deadline: 'Data limite' 
+        maximum_value_hour: 'Valor máximo (por hora de trabalho) não pode ficar em branco'

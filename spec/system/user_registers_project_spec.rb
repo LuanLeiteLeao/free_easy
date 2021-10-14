@@ -27,7 +27,7 @@ describe 'User Register Project' do
     click_on 'Enviar'  
 
      #Assert
-     expect(page).to have_content('não pode ficar em branco', count: 6)
+     expect(page).to have_content('não pode ficar em branco', count: 7)
      expect(Project.count).to eq(0)
 
   end
